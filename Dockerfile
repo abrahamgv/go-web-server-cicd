@@ -6,3 +6,5 @@ FROM alpine:latest
 COPY --from=0 /go/bin/hello-app .
 ENV PORT 8080
 CMD ["./hello-app"]
+
+EXPOSE 8080
