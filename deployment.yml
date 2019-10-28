@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: go-server
-        image: gcr.io/abraham-gcp/go-server
+        image: gcr.io/abraham-gcp/go-server:7
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
