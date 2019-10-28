@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: go-server
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: go-server
+    spec:
+      containers:
+      - name: go-server
+        image: gcr.io/abraham-gcp/go-server
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: FOR_GODS_SAKE_PLEASE_REDEPLOY
+          value: 'Sen Okt 28 09:59:01 WIB 2019'
